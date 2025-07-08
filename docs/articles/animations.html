@@ -32,8 +32,10 @@
         /* Enhanced hover effect for sub-cards */
         .sub-card-hover-effect {
             transition: all 0.2s ease-in-out;
-            background-size: cover;
+            /* Changed background-size to zoom in and stretch the GIF */
+            background-size: 200% 200%; /* Stretches to 200% width and 200% height */
             background-position: center;
+            background-repeat: no-repeat; /* Ensure no repetition */
             position: relative; /* Needed for overlay */
             overflow: hidden; /* Ensures overlay doesn't overflow rounded corners */
             min-height: 180px; /* Added minimum height for consistency */
@@ -45,13 +47,11 @@
             left: 0;
             right: 0;
             bottom: 0;
-            /* Changed opacity to 0 for a fully opaque background image */
             background-color: rgba(249, 250, 251, 0); /* Fully transparent overlay */
             z-index: 1; /* Place overlay above background image */
             transition: background-color 0.2s ease-in-out; /* Smooth transition for overlay */
         }
         .sub-card-hover-effect:hover::before {
-            /* Changed opacity to 0 for a fully opaque background image on hover */
             background-color: rgba(249, 250, 251, 0); /* Fully transparent on hover */
         }
         .sub-card-hover-effect > * {
@@ -86,12 +86,33 @@
                 <h2 class="text-3xl font-semibold text-blue-700 mb-4 flex items-center">
                     <!-- New SVG icon for Character Design -->
                     <svg class="w-8 h-8 mr-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 10a6 6 0 11-12 0 6 6 0 0112 0zM12 16c-3.314 0-6 2.686-6 6h12c0-3.314-2.686-6-6-6zM17 3l2 2-2 2M12 3v4M7 3l-2 2 2 2"></path></svg>
-                    Character Design
+                    Generic Animations
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Animations Sub-Card -->
-                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Roadmap/animations.jpeg');">
-                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Animations</h3>
+                    <!-- Sub-Card -->
+                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Animations/Idle.gif');">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Idle</h3>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                            
+                        </ul>
+                    </div>
+                    <!-- Sub-Card -->
+                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Animations/melee.gif');">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Melee</h3>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                            
+                        </ul>
+                    </div>
+                    <!-- Sub-Card -->
+                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Animations/ranged.gif');">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Ranged</h3>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                            
+                        </ul>
+                    </div>
+                    <!-- Sub-Card -->
+                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Animations/casting.gif');">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Casting</h3>
                         <ul class="list-disc pl-5 text-gray-700 space-y-1">
                             
                         </ul>
