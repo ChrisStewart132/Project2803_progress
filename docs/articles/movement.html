@@ -32,12 +32,13 @@
         /* Enhanced hover effect for sub-cards */
         .sub-card-hover-effect {
             transition: all 0.2s ease-in-out;
-            background-size: 250% 250%; /* Default to 200% 200% for all */
+            background-size: 250% 250%; /* Changed from 250% to 200% as requested */
             background-position: center; /* Default to center for all */
             background-repeat: no-repeat; /* Ensure no repetition */
-            position: relative; /* Needed for overlay */
+            position: relative; /* Needed for overlay and absolute positioning of checkboxes */
             overflow: hidden; /* Ensures overlay doesn't overflow rounded corners */
             min-height: 180px; /* Added minimum height for consistency */
+            padding-bottom: 3rem; /* Add padding at the bottom to make space for checkboxes */
         }
         .sub-card-hover-effect::before {
             content: '';
@@ -62,8 +63,8 @@
             appearance: none;
             -webkit-appearance: none;
             -moz-appearance: none;
-            width: 1.25rem; /* 20px */
-            height: 1.25rem; /* 20px */
+            width: 1rem; /* Smaller size for checkbox */
+            height: 1rem; /* Smaller size for checkbox */
             border: 2px solid #3b82f6; /* Blue-600 border */
             border-radius: 0.25rem; /* Rounded corners */
             background-color: #ffffff; /* White background */
@@ -78,7 +79,7 @@
         }
         .custom-checkbox:checked::after {
             content: '\2713'; /* Checkmark character */
-            font-size: 0.8rem;
+            font-size: 0.7rem; /* Adjusted font size for smaller checkbox */
             color: white;
             position: absolute;
             top: 50%;
@@ -102,7 +103,7 @@
         }
         .custom-checkbox:disabled:not(:checked)::after {
             content: '\2718'; /* Red cross character */
-            font-size: 0.8rem;
+            font-size: 0.7rem; /* Adjusted font size for smaller checkbox */
             color: #ef4444; /* Red-500 color */
             position: absolute;
             top: 50%;
@@ -198,7 +199,7 @@
                 </div>
             </section>
 
-                        <!-- Main Section -->
+                    <!-- Main Section -->
             <section class="bg-white p-8 rounded-xl shadow-lg main-section-hover-effect">
                 <h2 class="text-3xl font-semibold text-blue-700 mb-4 flex items-center">
                     <!-- SVG icon for Generic Animations (Play Circle) -->
@@ -232,109 +233,99 @@
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Sub-Card: Roll -->
-                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Movement/RollUnique.gif');">
+                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-size: 100% 100% ;background-image: url('../assets/img/Movement/RollUnique.gif');">
                         <h3 class="text-xl font-semibold text-blue-700 mb-2">Roll</h3>
-                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
-                            <!-- Checkbox Segment -->
-                            <div class="mt-2 text-gray-800">
-                                <label class="inline-flex items-center mr-4">
-                                    <input type="checkbox" class="custom-checkbox" name="rollInitialImpulse" checked disabled>
-                                    <span class="ml-2 text-sm">Initial Impulse</span>
-                                </label>
-                                <label class="inline-flex items-center mr-4">
-                                    <input type="checkbox" class="custom-checkbox" name="rollDirectionControl" checked disabled>
-                                    <span class="ml-2 text-sm">Direction Control</span>
-                                </label>
-                                <label class="inline-flex items-center">
-                                    <input type="checkbox" class="custom-checkbox" name="rollDragReduction" disabled>
-                                    <span class="ml-2 text-sm">Drag Reduction</span>
-                                </label>
-                            </div>
-                        </ul>
+                        <!-- Checkbox Segment moved and styled for bottom-left -->
+                        <div class="absolute bottom-2 left-2 z-10 flex flex-wrap gap-x-2">
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" class="custom-checkbox" name="rollInitialImpulse" checked disabled>
+                                <span class="ml-1 text-xs text-gray-700">Initial Impulse</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" class="custom-checkbox" name="rollDirectionControl" checked disabled>
+                                <span class="ml-1 text-xs text-gray-700">Direction Control</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" class="custom-checkbox" name="rollDragReduction" disabled>
+                                <span class="ml-1 text-xs text-gray-700">Drag Reduction</span>
+                            </label>
+                        </div>
                     </div>
                     <!-- Sub-Card: Flip -->
                     <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Movement/FlipUnique.gif');">
                         <h3 class="text-xl font-semibold text-blue-700 mb-2">Flip</h3>
-                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
-                            <!-- Checkbox Segment -->
-                            <div class="mt-2 text-gray-800">
-                                <label class="inline-flex items-center mr-4">
-                                    <input type="checkbox" class="custom-checkbox" name="flipInitialImpulse" checked disabled>
-                                    <span class="ml-2 text-sm">Initial Impulse</span>
-                                </label>
-                                <label class="inline-flex items-center mr-4">
-                                    <input type="checkbox" class="custom-checkbox" name="flipDirectionControl" disabled>
-                                    <span class="ml-2 text-sm">Direction Control</span>
-                                </label>
-                                <label class="inline-flex items-center">
-                                    <input type="checkbox" class="custom-checkbox" name="flipDragReduction" checked disabled>
-                                    <span class="ml-2 text-sm">Drag Reduction</span>
-                                </label>
-                            </div>
-                        </ul>
+                        <!-- Checkbox Segment moved and styled for bottom-left -->
+                        <div class="absolute bottom-2 left-2 z-10 flex flex-wrap gap-x-2">
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" class="custom-checkbox" name="flipInitialImpulse" checked disabled>
+                                <span class="ml-1 text-xs text-gray-700">Initial Impulse</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" class="custom-checkbox" name="flipDirectionControl" disabled>
+                                <span class="ml-1 text-xs text-gray-700">Direction Control</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" class="custom-checkbox" name="flipDragReduction" checked disabled>
+                                <span class="ml-1 text-xs text-gray-700">Drag Reduction</span>
+                            </label>
+                        </div>
                     </div>
                     <!-- Sub-Card: Slide -->
-                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Animations/run.');">
+                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Movement/slideUnique.gif');">
                         <h3 class="text-xl font-semibold text-blue-700 mb-2">Slide</h3>
-                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
-                            <!-- Checkbox Segment -->
-                            <div class="mt-2 text-gray-800">
-                                <label class="inline-flex items-center mr-4">
-                                    <input type="checkbox" class="custom-checkbox" name="slideInitialImpulse" checked disabled>
-                                    <span class="ml-2 text-sm">Initial Impulse</span>
-                                </label>
-                                <label class="inline-flex items-center mr-4">
-                                    <input type="checkbox" class="custom-checkbox" name="slideDirectionControl" disabled>
-                                    <span class="ml-2 text-sm">Direction Control</span>
-                                </label>
-                                <label class="inline-flex items-center">
-                                    <input type="checkbox" class="custom-checkbox" name="slideDragReduction" disabled>
-                                    <span class="ml-2 text-sm">Drag Reduction</span>
-                                </label>
-                            </div>
-                        </ul>
+                        <!-- Checkbox Segment moved and styled for bottom-left -->
+                        <div class="absolute bottom-2 left-2 z-10 flex flex-wrap gap-x-2">
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" class="custom-checkbox" name="slideInitialImpulse" checked disabled>
+                                <span class="ml-1 text-xs text-gray-700">Initial Impulse</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" class="custom-checkbox" name="slideDirectionControl" disabled>
+                                <span class="ml-1 text-xs text-gray-700">Direction Control</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" class="custom-checkbox" name="slideDragReduction" disabled>
+                                <span class="ml-1 text-xs text-gray-700">Drag Reduction</span>
+                            </label>
+                        </div>
                     </div>
                     <!-- Sub-Card: Fly -->
                     <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Animations/FlyMage.');">
                         <h3 class="text-xl font-semibold text-blue-700 mb-2">Fly</h3>
-                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
-                            <!-- Checkbox Segment -->
-                            <div class="mt-2 text-gray-800">
-                                <label class="inline-flex items-center mr-4">
-                                    <input type="checkbox" class="custom-checkbox" name="flyInitialImpulse" checked disabled>
-                                    <span class="ml-2 text-sm">Initial Impulse</span>
-                                </label>
-                                <label class="inline-flex items-center mr-4">
-                                    <input type="checkbox" class="custom-checkbox" name="flyDirectionControl" checked disabled>
-                                    <span class="ml-2 text-sm">Direction Control</span>
-                                </label>
-                                <label class="inline-flex items-center">
-                                    <input type="checkbox" class="custom-checkbox" name="flyDragReduction" checked disabled>
-                                    <span class="ml-2 text-sm">Drag Reduction</span>
-                                </label>
-                            </div>
-                        </ul>
+                        <!-- Checkbox Segment moved and styled for bottom-left -->
+                        <div class="absolute bottom-2 left-2 z-10 flex flex-wrap gap-x-2">
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" class="custom-checkbox" name="flyInitialImpulse" checked disabled>
+                                <span class="ml-1 text-xs text-gray-700">Initial Impulse</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" class="custom-checkbox" name="flyDirectionControl" checked disabled>
+                                <span class="ml-1 text-xs text-gray-700">Direction Control</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" class="custom-checkbox" name="flyDragReduction" checked disabled>
+                                <span class="ml-1 text-xs text-gray-700">Drag Reduction</span>
+                            </label>
+                        </div>
                     </div>
                     <!-- Sub-Card: Hover -->
                     <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Animations/HoverMage.');">
                         <h3 class="text-xl font-semibold text-blue-700 mb-2">Hover</h3>
-                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
-                            <!-- Checkbox Segment -->
-                            <div class="mt-2 text-gray-800">
-                                <label class="inline-flex items-center mr-4">
-                                    <input type="checkbox" class="custom-checkbox" name="hoverInitialImpulse" disabled>
-                                    <span class="ml-2 text-sm">Initial Impulse</span>
-                                </label>
-                                <label class="inline-flex items-center mr-4">
-                                    <input type="checkbox" class="custom-checkbox" name="hoverDirectionControl" checked disabled>
-                                    <span class="ml-2 text-sm">Direction Control</span>
-                                </label>
-                                <label class="inline-flex items-center">
-                                    <input type="checkbox" class="custom-checkbox" name="hoverDragReduction" checked disabled>
-                                    <span class="ml-2 text-sm">Drag Reduction</span>
-                                </label>
-                            </div>
-                        </ul>
+                        <!-- Checkbox Segment moved and styled for bottom-left -->
+                        <div class="absolute bottom-2 left-2 z-10 flex flex-wrap gap-x-2">
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" class="custom-checkbox" name="hoverInitialImpulse" disabled>
+                                <span class="ml-1 text-xs text-gray-700">Initial Impulse</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" class="custom-checkbox" name="hoverDirectionControl" checked disabled>
+                                <span class="ml-1 text-xs text-gray-700">Direction Control</span>
+                            </label>
+                            <label class="inline-flex items-center">
+                                <input type="checkbox" class="custom-checkbox" name="hoverDragReduction" checked disabled>
+                                <span class="ml-1 text-xs text-gray-700">Drag Reduction</span>
+                            </label>
+                        </div>
                     </div>
                     
                 </div>
