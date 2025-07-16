@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combat Design: Melee</title>
+    <!-- Favicon Link -->
+    <link rel="icon" type="image/png" href="../favicon-32x32.png" sizes="32x32">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5; /* Light gray background */
+            background-image: linear-gradient(to bottom, #f0f2f5, #e0e2e5); /* Subtle gradient */
+            min-height: 100vh; /* Ensure body takes full viewport height */
+        }
+        /* Custom list styles for better visual distinction */
+        ul.list-disc li {
+            list-style-type: disc;
+        }
+        ul.list-circle li {
+            list-style-type: circle;
+        }
+        /* Enhanced hover effect for main sections */
+        .main-section-hover-effect {
+            transition: all 0.3s ease-in-out;
+        }
+        .main-section-hover-effect:hover {
+            transform: translateY(-5px) scale(1.005);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        /* Enhanced hover effect for sub-cards */
+        .sub-card-hover-effect {
+            transition: all 0.2s ease-in-out;
+            background-size: 200% 200%; /* Default to 200% 200% for all */
+            background-position: center; /* Default to center for all */
+            background-repeat: no-repeat; /* Ensure no repetition */
+            position: relative; /* Needed for overlay */
+            overflow: hidden; /* Ensures overlay doesn't overflow rounded corners */
+            min-height: 180px; /* Added minimum height for consistency */
+        }
+        .sub-card-hover-effect::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(249, 250, 251, 0); /* Fully transparent overlay */
+            z-index: 1; /* Place overlay above background image */
+            transition: background-color 0.2s ease-in-out; /* Smooth transition for overlay */
+        }
+        .sub-card-hover-effect:hover::before {
+            background-color: rgba(249, 250, 251, 0); /* Fully transparent on hover */
+        }
+        .sub-card-hover-effect > * {
+            position: relative; /* Place content above overlay */
+            z-index: 2;
+        }
+    </style>
+</head>
+<body class="antialiased text-gray-800">
+    <div class="min-h-screen flex flex-col items-center">
+        <!-- Header Section -->
+        <header class="bg-gray-800 text-white py-6 text-center shadow-md w-full">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl font-bold mb-2">Project2803 Combat Design: Melee</h1>
+                <p class="text-lg opacity-90 article-meta">Published on: TBC</p>
+            </div>
+        </header>
+
+        <!-- Navigation Bar -->
+        <nav class="bg-gray-700 py-3 shadow-sm w-full">
+            <div class="container mx-auto px-4 flex justify-center space-x-6">
+                <a href="../index.html" class="text-white hover:text-blue-300 transition duration-300 ease-in-out text-lg font-medium">Home</a>
+                <!-- Add more navigation links here if needed -->
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main class="w-full max-w-4xl flex flex-col gap-8 py-10 px-4 sm:px-6 lg:px-8">
+
+            <!-- Generic Animations Section -->
+            <section class="bg-white p-8 rounded-xl shadow-lg main-section-hover-effect">
+                <h2 class="text-3xl font-semibold text-blue-700 mb-4 flex items-center">
+                    <!-- SVG icon for Generic Animations (Play Circle) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-circle mr-4 text-blue-600"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                    Generic Melee
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Sub-Card -->
+                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Animations/Idle');">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">...</h3>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                            
+                        </ul>
+                    </div>
+                    
+                </div>
+            </section>
+
+            <!-- Unique Knight Animations Section -->
+            <section class="bg-white p-8 rounded-xl shadow-lg main-section-hover-effect">
+                <h2 class="text-3xl font-semibold text-blue-700 mb-4 flex items-center">
+                    <!-- SVG icon for Unique Knight Animations (Shield) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield mr-4 text-blue-600"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                    Unique Knight Melee
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Sub-Card -->
+                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Animations/meleeKnight');">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">...</h3>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                            
+                        </ul>
+                    </div>
+
+                </div>
+                    
+            </section>
+
+
+            <!-- Unique Undead Section -->
+            <section class="bg-white p-8 rounded-xl shadow-lg main-section-hover-effect">
+                <h2 class="text-3xl font-semibold text-blue-700 mb-4 flex items-center">
+                    <!-- SVG icon for Unique Undead (Skull) -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-skull mr-4 text-blue-600"><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/><path d="M8 20v2h8v-2"/><path d="M12 17v3"/><path d="M19 10c0 2.2-1.8 4-4 4H9c-2.2 0-4-1.8-4-4V7c0-2.2 1.8-4 4-4h6c2.2 0 4 1.8 4 4v3z"/></svg>
+                    Unique Undead Melee
+                </h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Sub-Card -->
+                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Animations/MeleeDeathLord');">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">...</h3>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                            
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="bg-gray-800 text-white py-6 text-center w-full mt-10">
+            <div class="container mx-auto px-4 flex justify-center space-x-6" id="navbar-links">
+                <!-- Only a Home link that points to the current page -->
+                <a href="ranged.html" class="text-white hover:text-blue-300 transition duration-300 ease-in-out text-lg font-medium">Next Article</a>
+            </div>
+            <div class="container mx-auto px-4">
+                <p class="text-sm opacity-80">&copy; 2025 Project2803. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
