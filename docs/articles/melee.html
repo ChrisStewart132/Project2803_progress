@@ -34,8 +34,9 @@
         /* Enhanced hover effect for sub-cards */
         .sub-card-hover-effect {
             transition: all 0.2s ease-in-out;
-            background-size: 200% 200%; /* Default to 200% 200% for all */
-            background-position: center; /* Default to center for all */
+            background-size: 150% 150%; /* Default to 200% 200% for all */
+            /* Shifted background-position: */
+            background-position: center 10%; /* Start with 60%, then try 70%, etc. */
             background-repeat: no-repeat; /* Ensure no repetition */
             position: relative; /* Needed for overlay */
             overflow: hidden; /* Ensures overlay doesn't overflow rounded corners */
@@ -82,63 +83,105 @@
         <!-- Main Content Area -->
         <main class="w-full max-w-4xl flex flex-col gap-8 py-10 px-4 sm:px-6 lg:px-8">
 
-            <!-- Generic Animations Section -->
+            <!-- Section -->
             <section class="bg-white p-8 rounded-xl shadow-lg main-section-hover-effect">
                 <h2 class="text-3xl font-semibold text-blue-700 mb-4 flex items-center">
-                    <!-- SVG icon for Generic Animations (Play Circle) -->
+                    <!-- SVG icon -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-circle mr-4 text-blue-600"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
-                    Generic Melee
+                    Generic Melee Weapons
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Sub-Card -->
-                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Animations/Idle');">
-                        <h3 class="text-xl font-semibold text-blue-700 mb-2">...</h3>
+                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Weapons/weapons1\ \(1\).gif');">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Swords</h3>
                         <ul class="list-disc pl-5 text-gray-700 space-y-1">
-                            
                         </ul>
                     </div>
-                    
+                    <!-- Sub-Card -->
+                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Weapons/weapons1\ \(2\).gif');">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Axe & Fist</h3>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                        </ul>
+                    </div>
+                    <!-- Sub-Card -->
+                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Weapons/weapons1\ \(3\).gif');">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Staves</h3>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                        </ul>
+                    </div>
+                    <!-- Sub-Card -->
+                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Weapons/weapons1\ \(4\).gif');">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Misc & Mace</h3>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                        </ul>
+                    </div>
+                    <!-- Sub-Card -->
+                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Weapons/offhand.gif');">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Offhand</h3>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                        </ul>
+                    </div>
                 </div>
             </section>
 
-            <!-- Unique Knight Animations Section -->
+            <!-- Section -->
             <section class="bg-white p-8 rounded-xl shadow-lg main-section-hover-effect">
                 <h2 class="text-3xl font-semibold text-blue-700 mb-4 flex items-center">
-                    <!-- SVG icon for Unique Knight Animations (Shield) -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-shield mr-4 text-blue-600"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                    Unique Knight Melee
+                    <!-- SVG icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-circle mr-4 text-blue-600"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                    Generic Melee Variants
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Sub-Card -->
-                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Animations/meleeKnight');">
-                        <h3 class="text-xl font-semibold text-blue-700 mb-2">...</h3>
+                    <!-- Sub-Card -->
+                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Melee/melee_variant_1.gif');">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Onehanded Variants</h3>
                         <ul class="list-disc pl-5 text-gray-700 space-y-1">
-                            
                         </ul>
                     </div>
-
+                    <!-- Sub-Card -->
+                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Melee/melee_variant_2.gif');">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Offhand Dagger</h3>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                        </ul>
+                    </div>
+                    <!-- Sub-Card -->
+                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Melee/melee_variant_3.gif');">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Offhand Sword</h3>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                        </ul>
+                    </div>
                 </div>
-                    
             </section>
 
-
-            <!-- Unique Undead Section -->
+            <!-- Section -->
             <section class="bg-white p-8 rounded-xl shadow-lg main-section-hover-effect">
                 <h2 class="text-3xl font-semibold text-blue-700 mb-4 flex items-center">
-                    <!-- SVG icon for Unique Undead (Skull) -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-skull mr-4 text-blue-600"><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/><path d="M8 20v2h8v-2"/><path d="M12 17v3"/><path d="M19 10c0 2.2-1.8 4-4 4H9c-2.2 0-4-1.8-4-4V7c0-2.2 1.8-4 4-4h6c2.2 0 4 1.8 4 4v3z"/></svg>
-                    Unique Undead Melee
+                    <!-- SVG icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-circle mr-4 text-blue-600"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                    Generic One handed collider
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Sub-Card -->
-                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Animations/MeleeDeathLord');">
-                        <h3 class="text-xl font-semibold text-blue-700 mb-2">...</h3>
+                    <!-- Sub-Card -->
+                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Melee/melee_variant_1.');">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Attack1</h3>
                         <ul class="list-disc pl-5 text-gray-700 space-y-1">
-                            
+                        </ul>
+                    </div>
+                    <!-- Sub-Card -->
+                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Melee/melee_variant_2.');">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Attack2</h3>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
+                        </ul>
+                    </div>
+                    <!-- Sub-Card -->
+                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Melee/melee_variant_3.');">
+                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Attack3</h3>
+                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
                         </ul>
                     </div>
                 </div>
             </section>
+
 
         </main>
 
