@@ -236,6 +236,36 @@
                         <img src="../assets/img/GenericAI/boidConfig111.jpg" alt="KnightV1 Flee Animation" class="w-full rounded-md shadow-md mb-2">
                         <ul class="list-disc pl-5 text-gray-700 space-y-1"></ul>
                     </div>
+                    <h2 class="text-3xl font-semibold text-blue-700 mb-4 flex items-center">
+                        <!-- SVG icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-circle mr-4 text-blue-600"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                        Cohesion (The Social Instinct - "Stay with the group")
+                    </h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-1">
+                        <li>High Positive Weight (+0.5 to +1.0): "magnetic" pull towards the group's center.</li>
+                        <li>Low Positive Weight (+0.1 to +0.3): like being near each other but aren't obsessed with it.</li>
+                        <li>Boids will actively flee from the center of the group.</li>
+                    </div>
+                    <h2 class="text-3xl font-semibold text-blue-700 mb-4 flex items-center">
+                        <!-- SVG icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-circle mr-4 text-blue-600"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                        Alignment (The Conformist Instinct - "Follow the leader / Do what others are doing")
+                    </h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-1">
+                        <li>High Positive Weight (+0.5 to +1.0): This creates a highly disciplined, synchronized group.</li>
+                        <li>Low Positive Weight (+0.1 to +0.3): A more natural, "flowing" movement, like a river or a crowd exiting a stadium.</li>
+                        <li>Negative Weight (-0.1 to -1.0): Boids move in the opposite direction of their neighbors.</li>
+                    </div>
+                    <h2 class="text-3xl font-semibold text-blue-700 mb-4 flex items-center">
+                        <!-- SVG icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-circle mr-4 text-blue-600"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                        Separation (The Personal Space Instinct - "Don't touch me!")
+                    </h2>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-1">
+                        <li>High Positive Weight (+0.5 to +1.0): This is the most common setting. The boids have a very strong, immediate desire to avoid collisions.</li>
+                        <li>Low Positive Weight (+0.1 to +0.3): The boids don't mind being very close.</li>
+                        <li>Note: Separation weight is almost never zero or negative, as its primary job is to prevent collisions.</li>
+                    </div>
                     <div class="p-4 rounded-lg shadow-sm bg-gray-50 flex flex-col items-center">
                         <h3 class="text-xl font-semibold text-blue-700 mb-2">Demo: BOID111 (cohesion, alignment, seperation)</h3>
                         <img src="../assets/img/GenericAI/boid111.gif" alt="KnightV1 Flee Animation" class="w-full rounded-md shadow-md mb-2">
@@ -261,36 +291,13 @@
                         <img src="../assets/img/GenericAI/boid-1-11.gif" alt="KnightV1 Flee Animation" class="w-full rounded-md shadow-md mb-2">
                         <ul class="list-disc pl-5 text-gray-700 space-y-1"></ul>
                     </div>
+                    
                 </div>
             </section>
 
             <!-- Section -->
             <section class="bg-white p-8 rounded-xl shadow-lg main-section-hover-effect">
-                <h2 class="text-3xl font-semibold text-blue-700 mb-4 flex items-center">
-                    <!-- SVG icon -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-circle mr-4 text-blue-600"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
-                    Behaviours
-                </h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Sub-Card -->
-                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Magic/light.');">
-                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Idle</h3>
-                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
-                        </ul>
-                    </div>
-                    <!-- Sub-Card -->
-                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Magic/dark.');">
-                        <h3 class="text-xl font-semibold text-blue-700 mb-2">AttackTarget</h3>
-                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
-                        </ul>
-                    </div>
-                    <!-- Sub-Card -->
-                    <div class="p-4 rounded-lg shadow-sm sub-card-hover-effect" style="background-image: url('../assets/img/Magic/fire.');">
-                        <h3 class="text-xl font-semibold text-blue-700 mb-2">Flee</h3>
-                        <ul class="list-disc pl-5 text-gray-700 space-y-1">
-                        </ul>
-                    </div>
-                </div>
+                
             </section>
 
             <!-- Section -->
